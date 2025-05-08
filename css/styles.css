@@ -1,0 +1,77 @@
+/*Resetea estilo*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Seteamos el estilo de todo el documento*/
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+/* Encabezado */
+header {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #e50914;
+    text-shadow: 5px 5px 5px #000000;
+    font-style: normal;
+    letter-spacing: 0.5rem;
+    background-color: #1f1f1f;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #e50914;
+}
+
+/*Ancla del ancla H1 */
+header h1 a{ 
+    text-decoration: none;
+    color: #e50914;
+    text-shadow: 5px 5px 5px #000000;
+}
+
+/*Configuración del menú de navegación*/
+.menu-navegacion {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+.menu-navegacion li{
+    list-style-type: none;
+    text-shadow: none;
+    cursor: pointer;
+}
+.menu-navegacion li a{
+    color: #e50914;
+    text-decoration: none;
+}
+.menu-navegacion li a:hover{
+    color: #9acd32;
+    
+}
+
+
+
+/* Estilos para pantallas pequeñas */
+@media only screen and (max-width: 600px) {
+    header {
+        font-size: 2rem;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    color: #888;
+}
