@@ -87,7 +87,6 @@ header h1 a {
     flex: 50vh;
     line-height: 2;
     text-align: center;
-
     /*border: solid white;*/
 }
 
@@ -96,6 +95,51 @@ header h1 a {
     width: 40vw;
     padding: 1rem;
 }
+
+/*Configuración del H2*/
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #e50914;
+}
+
+/*Configuración sección Posters*/
+#contenedor-posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    gap: 3rem;
+    border-bottom: 2px solid #e50914;
+    /*border: solid white;*/
+}
+
+.poster {
+    text-align: center;
+    width: 30%;
+    transition: 0.5s ease;
+}
+
+.poster:hover {
+    /* Mueve la tarjeta 5px hacia arriba */
+    transform: translateY(-15px);
+
+}
+
+.poster img {
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 5px 5px 15px 5px #3d3d3d;
+}
+
+.poster h3 {
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+
 
 /* Estilos para pantallas pequeñas */
 @media only screen and (max-width: 600px) {
@@ -106,6 +150,12 @@ header h1 a {
     #intro .texto-intro {
         font-size: 1rem;
         line-height: 2;
+    }
+
+    .poster h3 {
+        color: white;
+        padding: 0.5rem;
+        font-size: 0.8rem;
     }
 }
 
