@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Seteamos el estilo de todo el documento*/
@@ -28,8 +29,8 @@ header {
     border-bottom: 2px solid #e50914;
 }
 
-/*Ancla del ancla H1 */
-header h1 a{ 
+/*Ancla del ancla H1*/
+header h1 a {
     text-decoration: none;
     color: #e50914;
     text-shadow: 5px 5px 5px #000000;
@@ -44,26 +45,67 @@ header h1 a{
     justify-content: space-evenly;
     gap: 5px;
 }
-.menu-navegacion li{
+
+.menu-navegacion li {
     list-style-type: none;
     text-shadow: none;
     cursor: pointer;
 }
-.menu-navegacion li a{
+
+.menu-navegacion li a {
     color: #e50914;
     text-decoration: none;
 }
-.menu-navegacion li a:hover{
+
+.menu-navegacion li a:hover {
     color: #9acd32;
-    
+
 }
 
+/*Configuración Clase nombre-cine*/
+.nombre-cine {
+    color: #e50914;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 1.8rem;
+}
 
+/*Configuración de la sección Inicio*/
+#intro {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: baseline;
+    padding: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 2px solid #e50914;
+}
+
+#intro .texto-intro {
+    font-size: 1.5rem;
+    flex: 50vh;
+    line-height: 2;
+    text-align: center;
+
+    /*border: solid white;*/
+}
+
+#intro img {
+    flex: 40vh;
+    width: 40vw;
+    padding: 1rem;
+}
 
 /* Estilos para pantallas pequeñas */
 @media only screen and (max-width: 600px) {
     header {
         font-size: 2rem;
+    }
+
+    #intro .texto-intro {
+        font-size: 1rem;
+        line-height: 2;
     }
 }
 

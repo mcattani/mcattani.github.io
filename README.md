@@ -7,8 +7,7 @@ Web ficticia de un cine ficticio llamado **NovaFlix**.
 
 ## Autor
 
-- Mariano Cattani
-
+- Mariano C.
 
 ## Características
 
@@ -20,12 +19,17 @@ Web ficticia de un cine ficticio llamado **NovaFlix**.
 - Implementación de formulario de contacto utilizando el servicio de [FormSpree.](https://formspree.io/)
 - Utilización de **Media Queries** para que el sitio sea responsivo.
 
-## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.github.com/mcattani)
+## Extras
+- El texto de inicio y la imagen del cine fueron creadas con [ChatGPT](https://chatgpt.com/).
+- Los posters y las sinopsis fueron descargadas de [FilmAffinity](https://www.filmaffinity.com/es/main.html)
 
 ## Screenshots
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.github.com/mcattani)
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
