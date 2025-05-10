@@ -3,6 +3,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*Efecto de transición suave entre las anclas*/
+    scroll-behavior: smooth;
 }
 
 /* Seteamos el estilo de todo el documento*/
@@ -140,9 +142,9 @@ h2 {
 }
 
 /*Configuración sección Sinopsis y Trailers*/
-#contenedor-sinopsis-trailers{
+#contenedor-sinopsis-trailers {
     display: grid;
-    /*grid-template-columns: repeat(2, 1fr);*/
+    /*Dos columnas de todo el ancho*/
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     text-align: center;
@@ -151,34 +153,39 @@ h2 {
     /*border: solid white;*/
 }
 
-.sinopsis{
+.sinopsis {
     box-shadow: 5px 5px 15px 9px #1f1f1f;
     grid-template-columns: 1fr;
 }
 
-.sinopsis h2{
+.sinopsis h2 {
     font-size: 2.5rem;
     margin: 1rem;
     /*border: solid white;*/
 }
 
-.sinopsis p{
+.sinopsis p {
     margin: 1rem;
     font-size: 1.2rem;
 }
 
-iframe{
-    margin: 1rem;
+/*Configuración contenedor trailers*/
+.contenedor-trailers {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* relación 16:9 */
+    height: 0;
+    overflow:hidden;
 }
 
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #333;
-    color: #888;
+.contenedor-trailers iframe {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* Estilos para pantallas pequeñas */
@@ -197,10 +204,27 @@ footer {
         padding: 0.5rem;
         font-size: 0.8rem;
     }
-   
-   #contenedor-sinopsis-trailers{
-      grid-template-columns: 1fr;
-   }
 
-    
+    #contenedor-sinopsis-trailers {
+        grid-template-columns: 1fr;
+    }
+
+    .sinopsis h2 {
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    .sinopsis p {
+        margin: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    color: #888;
 }
