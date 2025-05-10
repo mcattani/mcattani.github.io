@@ -139,7 +139,47 @@ h2 {
     font-size: 1rem;
 }
 
+/*Configuración sección Sinopsis y Trailers*/
+#contenedor-sinopsis-trailers{
+    display: grid;
+    /*grid-template-columns: repeat(2, 1fr);*/
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    /*border: solid white;*/
+}
 
+.sinopsis{
+    box-shadow: 5px 5px 15px 9px #1f1f1f;
+    grid-template-columns: 1fr;
+}
+
+.sinopsis h2{
+    font-size: 2.5rem;
+    margin: 1rem;
+    /*border: solid white;*/
+}
+
+.sinopsis p{
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+iframe{
+    margin: 1rem;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+    color: #888;
+}
 
 /* Estilos para pantallas pequeñas */
 @media only screen and (max-width: 600px) {
@@ -157,13 +197,10 @@ h2 {
         padding: 0.5rem;
         font-size: 0.8rem;
     }
-}
+   
+   #contenedor-sinopsis-trailers{
+      grid-template-columns: 1fr;
+   }
 
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #333;
-    color: #888;
+    
 }
