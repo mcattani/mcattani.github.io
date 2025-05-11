@@ -12,9 +12,9 @@ Web ficticia de un cine ficticio llamado **NovaFlix**.
 ## Características
 
 - Maquetado HTML con **uso de etiquetas semánticas**: header, nav, main, section, article, footer...
-- Uso de hoja de estilos (CSS), implementación de fuentes a través de [Google Fonts](https://fonts.google.com/)
+- Uso de hoja de estilos (CSS) e implementación de fuentes a través de [Google Fonts](https://fonts.google.com/)
 - Utilización de **FlexBox** y **Grid** en CSS para la organización de contenido.
-- Uso de lista de navevación (UL) e inclusión de archivos multimedia (imágenes y videos)
+- Uso de lista de navegación (UL) e inclusión de archivos multimedia (imágenes y videos)
 - Uso de **Git** para el manejo de versiones y **Github Pages** para el hosting del proyecto.
 - Implementación de formulario de contacto utilizando el servicio de [FormSpree.](https://formspree.io/)
 - Utilización de **Media Queries** para que el sitio sea responsivo.
@@ -22,11 +22,6 @@ Web ficticia de un cine ficticio llamado **NovaFlix**.
 ## Extras
 - El texto de inicio y la imagen del cine fueron creadas con [ChatGPT](https://chatgpt.com/).
 - Los posters y las sinopsis fueron descargadas de [FilmAffinity](https://www.filmaffinity.com/es/main.html)
-
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.github.com/mcattani)
