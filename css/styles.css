@@ -174,18 +174,67 @@ h2 {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; /* relación 16:9 */
+    /*Se pone para que el contenedor no tenga altura propia, y así el padding sea el que le dé forma.*/
     height: 0;
+    /*Oculta cualquier contenido que se desborde*/
     overflow:hidden;
 }
 
 .contenedor-trailers iframe {
   padding: 1rem;
+  /*Coloca el iframe en la esquina superior izquierda*/
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/*Configuración Formulario*/
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+input,
+textarea,
+button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input,
+textarea {
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+button {
+    background-color: #e50914;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: center;
+    width: 40%;
+    
+}
+
+button:hover {
+    background-color: #ca0707b6;
+}
+
+.checkbox-form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
 }
 
 /* Estilos para pantallas pequeñas */

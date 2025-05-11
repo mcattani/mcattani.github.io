@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="shortcut icon" href="../imagenes/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Insertamos tipografía-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech&family=Share+Tech+Mono&display=swap"
+        rel="stylesheet">
+    <title>Consultas</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="../index.html">NovaFlix</a></h1>
+    </header>
+
+    <h2>Consultas</h2>
+    <form action="https://formspree.io/f/mwplyzqo" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" minlength="4" placeholder="Ingrese su nombre">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Ingrese su consulta" required minlength="10"></textarea>
+
+        <div class="checkbox-form">
+            <input type="checkbox" name="spam" id="spam">
+            <label for="checkbox">¿Desea recibir notificaciones y actualizaciones de nuestros productos?</label>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2025 - Todos los errores reservados</p>
+    </footer>
+
+</body>
+
+</html>
