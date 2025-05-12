@@ -173,22 +173,23 @@ h2 {
 .contenedor-trailers {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* relación 16:9 */
+    padding-bottom: 56.25%;
+    /*Relación 16:9 */
     /*Se pone para que el contenedor no tenga altura propia, y así el padding sea el que le dé forma.*/
     height: 0;
     /*Oculta cualquier contenido que se desborde*/
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .contenedor-trailers iframe {
-  padding: 1rem;
-  /*Coloca el iframe en la esquina superior izquierda*/
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+    padding: 1rem;
+    /*Coloca el iframe en la esquina superior izquierda*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /*Configuración Formulario*/
@@ -223,7 +224,7 @@ button {
     cursor: pointer;
     align-self: center;
     width: 40%;
-    
+
 }
 
 button:hover {
@@ -248,10 +249,10 @@ button:hover {
         line-height: 2;
     }
 
-    .poster{
+    .poster {
         width: 35%;
     }
-    
+
     .poster h3 {
         color: white;
         padding: 0.5rem;
