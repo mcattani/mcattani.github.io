@@ -1,9 +1,11 @@
 # En construcción
 
 # NovaFlix
-Pre entrega del proyecto para el curso de Front-End Js (25013).
+Pre entrega del proyecto para el curso de Front-End Js (comisión 25013).
 
-Web ficticia de un cine ficticio llamado **NovaFlix**.
+Web de un cine ficticio llamado **NovaFlix**. 
+
+Cuenta con una sección de introducción ("presentación del cine"), una sección de cartelera (con los posters de las películas disponibles) y una sección "sinopsis & trailers" (que incluye los trailers -iframe- ). También cuenta con una página "Consultas" con un formulario.
 
 ## Autor
 
