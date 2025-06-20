@@ -140,14 +140,15 @@ h2 {
 /*Configuración sección Sinopsis y Trailers*/
 #contenedor-sinopsis {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     /* crea tantas columnas como entren (mínimo 400px cada una)*/
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     /* Espacio entre columnas y filas */
+    gap: 2rem;
     padding: 2rem;
     margin: 0 auto;
-    max-width: 1200px;
     /* Limita el ancho máximo del contenido */
+    max-width: 1200px;
+    
 }
 
 /* Contenedor general de cada tarjeta */
@@ -172,10 +173,10 @@ h2 {
 .sinopsis-grid {
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: auto auto;
     /*Dos filas -> imagen y texto / botones*/
+    grid-template-rows: auto auto;
     gap: 1rem;
-    align-items: center;
+    align-items: start;
 }
 
 /* Contenedor de la imagen */
@@ -228,8 +229,8 @@ h2 {
     font-family: 'Share Tech', sans-serif;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    white-space: nowrap;
     /* Evita que el texto se divida en líneas */
+    white-space: nowrap;
 }
 
 .btn-trailer {
@@ -244,10 +245,11 @@ h2 {
 .btn-comprar {
     background-color: #2e7d32;
     color: white;
-    max-width: 165px;
     /* Ancho máximo para el botón comprar */
-    width: 100%;
-    /* Ocupa todo el ancho disponible*/
+    max-width: 170px;
+    /* Que ocupe todo el ancho disponible*/
+    width: 100%;    
+    text-align: center;
 }
 
 .btn-comprar:hover {
@@ -262,7 +264,7 @@ h2 {
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
-    background-color: #e50914;
+    background-color: rgba(229, 9, 20, 0.7); /*70% de opacidad */
     color: white;
     border: none;
     border-radius: 50%;
@@ -277,7 +279,7 @@ h2 {
 }
 
 #btn-volver-arriba:hover {
-    background-color: #b20710;
+    background-color: rgba(178, 7, 16, 0.9); 
 }
 
 /*Configuración Formulario*/
@@ -348,7 +350,8 @@ button:hover {
 
     #contenedor-sinopsis {
         grid-template-columns: 1fr; /* solo una columna */
-        padding: 1rem;
+        padding: 0rem;
+        margin: 0;
     }
 
     .sinopsis-grid {
