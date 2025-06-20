@@ -13,7 +13,7 @@ body {
     background-color: black;
     color: white;
     line-height: 1.6;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 /* Encabezado */
@@ -114,7 +114,6 @@ h2 {
     padding: 2rem;
     gap: 3rem;
     border-bottom: 2px solid #e50914;
-    /*border: solid white;*/
 }
 
 .poster {
@@ -138,11 +137,11 @@ h2 {
 .poster h3 {
     color: white;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /*Configuración sección Sinopsis y Trailers*/
-#contenedor-sinopsis-trailers {
+#contenedor-sinopsis{
     display: grid;
     /*Dos columnas de todo el ancho*/
     grid-template-columns: 1fr 1fr;
