@@ -63,7 +63,7 @@ header h1 a {
     color: #9acd32;
 }
 
-/*Configuración Clase nombre-cine*/
+/*Configuración de la clase nombre-cine*/
 .nombre-cine {
     color: #e50914;
     font-family: "Bebas Neue", sans-serif;
@@ -138,9 +138,16 @@ h2 {
 }
 
 /*Configuración sección Sinopsis y Trailers*/
-#contenedor-sinopsis{
-    padding: 1rem;
-    margin: 1rem;
+#contenedor-sinopsis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    /* crea tantas columnas como entren (mínimo 400px cada una)*/
+    gap: 2rem;
+    /* Espacio entre columnas y filas */
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    /* Limita el ancho máximo del contenido */
 }
 
 /* Contenedor general de cada tarjeta */
@@ -151,12 +158,13 @@ h2 {
     margin-bottom: 2rem;
     padding: 1rem;
     text-align: left;
+    width: 100%;
 }
 
 /* Título dentro de cada tarjeta */
 .sinopsis h2 {
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -165,6 +173,7 @@ h2 {
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-template-rows: auto auto;
+    /*Dos filas -> imagen y texto / botones*/
     gap: 1rem;
     align-items: center;
 }
@@ -189,13 +198,14 @@ h2 {
 /* Contenedor de la descripción */
 .descripcion {
     grid-column: 2;
+    /*Ocupa la segunda columna del grid*/
 }
 
 /* Párrafo de la descripción */
 .descripcion p {
     font-size: 1.2rem;
     margin: 0;
-    
+
 }
 
 /* Contenedor de los botones, ocupando toda la fila */
@@ -218,7 +228,8 @@ h2 {
     font-family: 'Share Tech', sans-serif;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    white-space: nowrap; /* Evita que el texto se divida en líneas */
+    white-space: nowrap;
+    /* Evita que el texto se divida en líneas */
 }
 
 .btn-trailer {
@@ -233,8 +244,10 @@ h2 {
 .btn-comprar {
     background-color: #2e7d32;
     color: white;
-    max-width: 165px; /* Ancho máximo para el botón comprar */
-    width: 100%;      /* Ocupa todo el ancho disponible hasta el máximo */
+    max-width: 165px;
+    /* Ancho máximo para el botón comprar */
+    width: 100%;
+    /* Ocupa todo el ancho disponible*/
 }
 
 .btn-comprar:hover {
@@ -254,10 +267,11 @@ h2 {
     border: none;
     border-radius: 50%;
     cursor: pointer;
-    display: flex; /* siempre visible */
+    display: flex;
+    /* siempre visible */
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     user-select: none;
 }
@@ -333,8 +347,8 @@ button:hover {
     }
 
     #contenedor-sinopsis {
-        padding: 0.5rem;
-        margin: 0.5rem;
+        grid-template-columns: 1fr; /* solo una columna */
+        padding: 1rem;
     }
 
     .sinopsis-grid {
