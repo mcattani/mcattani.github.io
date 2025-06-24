@@ -148,7 +148,7 @@ h2 {
     margin: 0 auto;
     /* Limita el ancho máximo del contenido */
     max-width: 1200px;
-    
+
 }
 
 /* Contenedor general de cada tarjeta */
@@ -226,7 +226,6 @@ h2 {
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    font-family: 'Share Tech', sans-serif;
     transition: background-color 0.3s ease;
     cursor: pointer;
     /* Evita que el texto se divida en líneas */
@@ -246,9 +245,9 @@ h2 {
     background-color: #2e7d32;
     color: white;
     /* Ancho máximo para el botón comprar */
-    max-width: 170px;
+    max-width: 200px;
     /* Que ocupe todo el ancho disponible*/
-    width: 100%;    
+    width: 100%;
     text-align: center;
 }
 
@@ -264,7 +263,8 @@ h2 {
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
-    background-color: rgba(229, 9, 20, 0.6); /*60% de opacidad */
+    background-color: rgba(229, 9, 20, 0.6);
+    /*60% de opacidad */
     color: white;
     border: none;
     border-radius: 50%;
@@ -279,7 +279,7 @@ h2 {
 }
 
 #btn-volver-arriba:hover {
-    background-color: rgba(178, 7, 16, 0.9); 
+    background-color: rgba(178, 7, 16, 0.9);
 }
 
 /*Configuración Formulario*/
@@ -327,6 +327,134 @@ button:hover {
     font-size: 1rem;
 }
 
+/* Pagina compras */
+.aviso {
+    background-color: #e50914;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+/* Contenedor principal centrado */
+#contenedor-compras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Secciones internas */
+#seleccion-pelicula,
+#carrito-compras {
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px 5px #111;
+    color: white;
+}
+
+/* Títulos */
+#seleccion-pelicula h2,
+#carrito-compras h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5rem;
+    color: #e50914;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Tablas */
+#tabla-seleccion,
+#tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+}
+
+#tabla-seleccion th,
+#tabla-seleccion td,
+#tabla-carrito th,
+#tabla-carrito td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* Inputs y selects */
+#tabla-seleccion input,
+#tabla-seleccion select {
+    background-color: #272626;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 0.4rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botones */
+.btn-confirmar {
+    background-color: #e50914;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 1rem auto 0;
+}
+
+.btn-confirmar:hover {
+    background-color: #b20710;
+}
+
+.btn-eliminar {
+    background-color: #ca0707;
+    color: white;
+    border: none;
+    padding: 0; /* quitar padding */
+    width: 30px;  /* ancho fijo */
+    height: 30px; /* alto fijo */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;              /* flex para centrar */
+    align-items: center;        /* centrar vertical */
+    justify-content: center;    /* centrar horizontal */
+    user-select: none;
+    box-sizing: border-box;
+    
+}
+
+.btn-eliminar:hover {
+    background-color: #9b0606;
+}
+
+/* Total general */
+#total-general {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #e50914;
+}
+
+
 /* Estilos para pantallas pequeñas */
 @media only screen and (max-width: 600px) {
     header {
@@ -349,7 +477,8 @@ button:hover {
     }
 
     #contenedor-sinopsis {
-        grid-template-columns: 1fr; /* solo una columna */
+        grid-template-columns: 1fr;
+        /* solo una columna */
         padding: 0rem;
         margin: 0;
     }
@@ -386,4 +515,55 @@ footer {
     padding-top: 1rem;
     border-top: 1px solid #333;
     color: #888;
+}
+
+/*Pagina Compras*/
+#contenedor-compras {
+    padding: 1rem;
+}
+
+#seleccion-pelicula,
+#carrito-compras {
+    padding: 1rem;
+    overflow-x: auto;
+}
+
+#tabla-seleccion,
+#tabla-carrito {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#tabla-seleccion table,
+#tabla-carrito table {
+    min-width: 600px;
+    /* para que haya scroll horizontal si se necesita */
+}
+
+#tabla-seleccion th,
+#tabla-seleccion td,
+#tabla-carrito th,
+#tabla-carrito td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+
+.btn-confirmar {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+}
+
+.aviso {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+}
+
+#seleccion-pelicula h2,
+#carrito-compras h2 {
+    font-size: 2rem;
+}
+
+#total-general {
+    font-size: 1rem;
 }
