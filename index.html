@@ -1,179 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css"> <!--"Conectamos con la hoja de estilos"-->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--Insertamos tipografía-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech&family=Share+Tech+Mono&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"> <!--Seteamos el favicon-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>PhoneXpress</title>
+    <link rel="stylesheet" href="css/styles.css">
 
     <!--Etiquetas metas SEO-->
     <meta name="description" content="Página principal de NovaFlix">
     <meta name="author" content="Mariano C.">
     <meta name="keywords" content="HTML, CSS, forms">
-    <title>NovaFlix</title>
-</head>
 
+</head>
 <body>
     <header>
-        <h1><a href="./index.html">NovaFlix</a></h1>
+        <h1>PhoneXpress - Tienda Online</h1>
         <nav>
-            <ul class="menu-navegacion">
-                <li><a href="#cartelera">Cartelera</a></li>
-                <li><a href="#sinopsis-trailers">Sinopsis & Trailers</a></li>
-                <li><a href="./pages/compra.html">Entradas</a></li>
-                <li><a href="./pages/consultas.html">Consultas</a></li>
-            </ul>
+            <a href="./pages/contacto.html">Contacto</a>
+            <a href="./pages/carrito.html" id="carrito-icono">
+                🛒 <span id="cantidad-carrito">0</span>
+            </a>
         </nav>
     </header>
 
     <main>
-        <section id="intro">
-            <div class="texto-intro">
-                <p>En el corazón de la ciudad, <span class="nombre-cine">NovaFlix</span> revive la magia del cine
-                    clásico con tecnología de última generación. Nuestro cine, con décadas de historia, ha sido
-                    completamente remodelado para ofrecer una experiencia moderna sin perder su esencia original. Bajo
-                    nuestro icónico cartel rojo y luces cálidas, te esperan las mejores películas, estrenos exclusivos y
-                    ciclos de cine que no encontrarás en ningún otro lado.
-                    Explorá nuestra cartelera, conocé nuestra historia y sentite parte de una experiencia
-                    cinematográfica única.
-                    <span class="nombre-cine">NovaFlix</span> no es solo un cine, es un viaje.
-                    <strong>¡Ahora puedes comprar las entradas desde nuestra web!</strong>
-                </p>
-            </div>
-            <img src="./img/imagen_frente_cine.png" alt="Frente Cine">
+        <section id="productos-container">
+            <!-- Aquí JS inyectará las cards de productos -->
         </section>
-
-        <h2 id="cartelera">Cartelera</h2>
-
-        <section id="contenedor-posters">
-            <article class="poster">
-                <a href="#pelicula-ballerina"><img src="./img/posters/ballerina_poster.jpg"
-                        alt="Poster película Ballerina"></a>
-                <h3>Ballerina</h3>
-            </article>
-            <article class="poster">
-                <a href="#pelicula-destino-final"><img src="./img/posters/destino_final_poster.jpg"
-                        alt="Poster película Destino Final"></a>
-                <h3>Destino Final: Lazos de Sangre</h3>
-            </article>
-            <article class="poster">
-                <a href="#pelicula-mision-imposible"><img src="./img/posters/mision_imposible_trailer.jpg"
-                        alt="Poster película Misión Imposible: Sentencia Final"></a>
-                <h3>Misión imposible: Sentencia final</h3>
-            </article>
-            <article class="poster">
-                <a href="#pelicula-28-anos-despues"><img src="./img/posters/28_años_despues_poster.jpg"
-                        alt="Poster película 28 años después"></a>
-                <h3>28 años después</h3>
-            </article>
-        </section>
-
-        <h2 id="sinopsis-trailers">Sinopsis & Trailers</h2>
-
-        <section id="contenedor-sinopsis">
-
-            <article id="pelicula-destino-final" class="sinopsis">
-                <h2>Destino Final: Lazos de Sangre</h2>
-                <div class="sinopsis-grid">
-                    <div class="poster-sinopsis">
-                        <img src="./img/posters/destino_final_poster.jpg" alt="Poster película Destino Final">
-                    </div>
-                    <div class="descripcion">
-                        <p>Acosada por una violenta pesadilla recurrente, la estudiante universitaria
-                            <abbr title="Kaitlyn Santa Juana">Stefanie</abbr> se dirige a casa para localizar a la única
-                            persona que podría ser capaz de romper el ciclo y salvar a su familia de
-                            la espeluznante muerte que inevitablemente les espera a todos.
-                        </p>
-                    </div>
-                    <div class="botones-sinopsis">
-                        <a href="https://www.youtube.com/watch?v=8FudANSsWNQ" target="_blank" class="btn-trailer">🎬 Ver
-                            trailer</a>
-                        <button class="btn-comprar" data-pelicula="destino-final">🎟️ Comprar entradas</button>
-                    </div>
-                </div>
-            </article>
-
-            <article id="pelicula-mision-imposible" class="sinopsis">
-                <h2>Misión imposible: Sentencia final</h2>
-                <div class="sinopsis-grid">
-                    <div class="poster-sinopsis">
-                        <img src="./img/posters/mision_imposible_trailer.jpg"
-                            alt="Poster película Misión Imposible: Sentencia Final">
-                    </div>
-                    <div class="descripcion">
-                        <p>El agente <abbr title="Tom Cruise">Ethan Hunt</abbr> continúa su misión de impedir que <abbr
-                                title="Esai Morales">Gabriel</abbr> controle el tecnológicamente
-                            omnipotente programa de IA conocido como "la Entidad".</p>
-                    </div>
-                    <div class="botones-sinopsis">
-                        <a href="https://www.youtube.com/watch?v=A6VZHeeZGgk" target="_blank" class="btn-trailer">🎬 Ver
-                            trailer</a>
-                        <button class="btn-comprar" data-pelicula="mision-imposible">🎟️ Comprar entradas</button>
-                    </div>
-                </div>
-            </article>
-
-            <article id="pelicula-28-anos-despues" class="sinopsis">
-                <h2>28 años después</h2>
-                <div class="sinopsis-grid">
-                    <div class="poster-sinopsis">
-                        <img src="./img/posters/28_años_despues_poster.jpg" alt="Poster película 28 años después">
-                    </div>
-                    <div class="descripcion">
-                        <p>Años transcurridos tras los sucesos de <a href="https://es.wikipedia.org/wiki/28_Weeks_Later"
-                                target="_blank" rel="noopener noreferrer">"28 semanas después"</a>, el virus de la ira
-                            ha regresado y un grupo de supervivientes debe sobrevivir en un mundo asolado por hordas de
-                            infectados.
-                            Rodada con un iPhone 15 Pro Max y con la ayuda de numerosos accesorios especializados.</p>
-                    </div>
-                    <div class="botones-sinopsis">
-                        <a href="https://www.youtube.com/watch?v=YqmaHRc6p0k" target="_blank" class="btn-trailer">🎬 Ver
-                            trailer</a>
-                        <button class="btn-comprar" data-pelicula="28-anos-despues">🎟️ Comprar entradas</button>
-                    </div>
-                </div>
-            </article>
-
-            <article id="pelicula-ballerina" class="sinopsis">
-                <h2>Ballerina</h2>
-                <div class="sinopsis-grid">
-                    <div class="poster-sinopsis">
-                        <img src="./img/posters/ballerina_poster.jpg" alt="Poster película Ballerina">
-                    </div>
-                    <div class="descripcion">
-                        <p><abbr title="Ana de Armas">Eve Macarro</abbr> es una asesina entrenada por la Ruska Roma
-                            desde su infancia, la misma organización criminal encargada del adiestramiento de <a
-                                href="https://en.wikipedia.org/wiki/John_Wick" target="_blank"
-                                rel="noopener noreferrer">John Wick</a>. En esta violenta historia de
-                            venganza, Eve intentará por todos los medios averiguar quién está detrás del asesinato de su
-                            padre. En su
-                            lucha por conocer la verdad descubrirá que existen secretos ocultos sobre su pasado.</p>
-                    </div>
-                    <div class="botones-sinopsis">
-                        <a href="https://www.youtube.com/watch?v=krxNyEkdkgM" target="_blank" class="btn-trailer">🎬 Ver
-                            trailer</a>
-                        <button class="btn-comprar" data-pelicula="ballerina">🎟️ Comprar entradas</button>
-                    </div>
-                </div>
-            </article>
-        </section>
-
     </main>
 
-    <a href="#" id="btn-volver-arriba" title="Volver al inicio">
-        <i class="fas fa-home"></i>
-    </a>
-
     <footer>
-        <p>&copy; 2025 NovaFlix - Todos los errores reservados.</p>
+        <p>&copy; 2025 PhoneXpress - Todos los derechos reservados.</p>
     </footer>
+    <script src="js/productos.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Contacto</h1>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="carrito.html">Carrito</a>
+        </nav>
+    </header>
+
+    <main>
+        <form action="https://formspree.io/f/mwplyzqo" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" minlength="4" placeholder="Ingrese su nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Ingrese su email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" placeholder="Ingrese su consulta" required minlength="10" required></textarea>
+
+            <button type="submit">Enviar Consulta</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PhoneXpress - Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
