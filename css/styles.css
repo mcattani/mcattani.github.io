@@ -84,9 +84,9 @@ nav a:hover {
 .producto-card img {
     width: 100%;
     height: auto;
-    max-height: 150px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px;
+    padding: 5px;
 }
 
 .producto-card h3 {
