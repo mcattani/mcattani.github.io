@@ -16,11 +16,11 @@
 <body>
     <header>
         <h1>Carrito de Compras</h1>
-       <nav>
-        <ul class="nav-lista">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="./pages/carrito.html" id="carrito-icono">🛒 <span id="cantidad-carrito">0</span></a></li>
-        </ul>
+        <nav>
+            <ul class="nav-lista">
+                <li><a href="../index.html">Inicio</a></li>
+                <li>🛒 <span id="cantidad-carrito">0</span></li>
+            </ul>
         </nav>
     </header>
 
@@ -28,6 +28,17 @@
         <section id="carrito-container">
             <!-- JS cargará aquí los productos del carrito -->
         </section>
+
+        <!-- Total a pagar -->
+        <section id="total-container">
+            <table>
+                <tr>
+                    <th>Total a pagar</th>
+                    <td id="total-pagar">$0</td>
+                </tr>
+            </table>
+        </section>
+   
     </main>
 
     <footer>
