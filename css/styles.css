@@ -136,6 +136,67 @@ nav ul.nav-lista li a:hover {
     box-shadow: 0 2px 6px rgba(0, 255, 204, 0.1);
 }
 
+/* Ítems del carrito */
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carrito-item button {
+    background-color: #ff5c5c;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carrito-item button:hover {
+    background-color: #ff3030;
+    transform: scale(1.05);
+}
+
+/* Botones generales del carrito */
+.carrito-botones {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.carrito-botones button {
+    padding: 10px 16px;
+    background-color: #00c896;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.carrito-botones button:hover {
+    background-color: #00ffcc;
+    transform: scale(1.05);
+}
+
+.boton-eliminar {
+    padding: 8px 12px;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-eliminar:hover {
+    background-color: #ff3333;
+    transform: scale(1.05);
+}
+
 /* Footer */
 footer {
     text-align: center;

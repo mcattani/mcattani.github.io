@@ -1,44 +1,61 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Recuperamos el carrito desde localStorage o lo iniciamos vacío
-    let carrito = JSON.parse(localStorage.getItem("carrito") || []);
+    let carrito = JSON.parse(localStorage.getItem("carrito") || "[]");
 
     // Función para renderizar los producotos del carrito
     function renderCarrito() {
         const contenedorCarrito = document.getElementById("carrito-container");
-        const contenedorTotal = document.getElementById("total-container");
+        const totalPagar = document.getElementById("total-pagar");
+        const contador = document.getElementById("cantidad-carrito");
+
+        contenedorCarrito.innerHTML = "";
+        console.log("Contenido actual del carrito:", carrito);
 
         // Si el carrito está vacío
         if (carrito.length === 0) {
             // Mostramos mensaje
-            let mensaje = document.createElement("p");
-            mensaje.textContent = "El carrito está vacío";
-            contenedorCarrito.appendChild(mensaje)
+            const mensaje = document.createElement("p");
+            mensaje.textContent = "El carrito está vacío.";
+            contenedorCarrito.appendChild(mensaje);
+            totalPagar.textContent = "$0";
+            contador.textContent = "0";
+            return;
         } else {
-            // Mostramos el contenido del carrito
-            for (const producto of carrito) {
-                // Capturamoms los elementos del HTML
-                let article = document.createElement("article");
-                let titulo = document.createElement("h2");
-                let precio = document.createElement("p");
-                let imagen = document.createElement("img");
+            // Si no esta vacio -> renderizamos los productos
+            carrito.forEach((producto, index) => {
+                const item = document.createElement("article");
+                item.classList.add("producto-card");
 
+                const titulo = document.createElement("h2");
+                titulo.classList.add("producto-titulo");
                 titulo.textContent = producto.title;
+
+                const precio = document.createElement("p");
+                precio.classList.add("producto-precio");
                 precio.textContent = `$${producto.price}`;
+
+                const imagen = document.createElement("img");
+                imagen.classList.add("producto-imagen");
                 imagen.src = producto.images[0];
                 imagen.alt = producto.title;
 
-                // Asignamos CSS
-                article.classList.add("producto-card");
-                titulo.classList.add("producto-titulo");
-                precio.classList.add("producto-precio");
-                imagen.classList.add("producto-imagen");
+                const btnEliminar = document.createElement("button");
+                btnEliminar.textContent = "Eliminar";
 
-                article.appendChild(imagen);
-                article.appendChild(titulo);
-                article.appendChild(precio);
+                // Evento del btnElimiar
+                btnEliminar.addEventListener("click", () => {
+                    alert(`${producto.title} ha sido eliminado`)
+                })
 
-                contenedorCarrito.appendChild(article);
-            }
+                item.appendChild(imagen);
+                item.appendChild(titulo);
+                item.appendChild(precio);
+                item.appendChild(btnEliminar);
+
+
+                contenedorCarrito.appendChild(item);
+
+            });
 
             // Calculamos y mostramos el total
             calcularTotal();
@@ -51,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 total += producto.price
             }
 
-            const totalPagar = document.getElementById("total-pagar");
             totalPagar.textContent = `$${total}`
         }
 
