@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Evento del btnElimiar
                 btnEliminar.addEventListener("click", () => {
-                    alert(`${producto.title} ha sido eliminado`)
+                    eliminarProducto(index);
                 })
 
                 item.appendChild(imagen);
@@ -67,16 +67,23 @@ document.addEventListener("DOMContentLoaded", function () {
             for (const producto of carrito) {
                 total += producto.price
             }
-
             totalPagar.textContent = `$${total}`
         }
-
-
     }
 
     function actualizarContador() {
         const contador = document.getElementById("cantidad-carrito");
         contador.textContent = carrito.length;
+    }
+
+    function eliminarProducto(index){
+        // Eliminamos del carrito
+        carrito.splice(index, 1);
+        // Actualizamos el localStorate
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        // Actualizamos
+        renderCarrito();
+        
     }
 
 
