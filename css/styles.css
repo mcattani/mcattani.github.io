@@ -124,8 +124,11 @@ nav ul.nav-lista li a:hover {
 /* Carrito */
 #carrito-container {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
 }
 
 .carrito-item {
@@ -160,10 +163,13 @@ nav ul.nav-lista li a:hover {
 
 /* Botones generales del carrito */
 .carrito-botones {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
+  display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px; /* o incluso 40px */
+    margin-bottom: 40px;
+    
 }
 
 .carrito-botones button {
@@ -195,6 +201,35 @@ nav ul.nav-lista li a:hover {
 .boton-eliminar:hover {
     background-color: #ff3333;
     transform: scale(1.05);
+}
+
+/*Contendor Total*/
+#total-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px; 
+    margin-top: 30px;*/
+    *align-items: center;    
+}
+
+#total-container table {
+    background-color: #1f1f1f;
+    color: #00ffcc;
+    border-collapse: collapse;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 255, 204, 0.15);
+    width: auto;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    padding: 20px;
+}
+
+#total-container th,
+#total-container td {
+    padding: 12px;
 }
 
 /* Footer */
