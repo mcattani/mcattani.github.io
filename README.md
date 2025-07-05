@@ -43,5 +43,3 @@ Proyecto final para el curso de Front-End JS (comisión 25013).
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.github.com/mcattani)
 
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-
-

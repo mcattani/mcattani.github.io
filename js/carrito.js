@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
             contador.textContent = "0";
             // Ocultamos los botones si el carrito está vacío
             contenedorBotones.style.display = "none";
-            
+
             return;
         } else {
             // Si no esta vacio -> mostramos los botones de vaciado y finalizar y luego renderizamos los productos
-             contenedorBotones.style.display = "flex";
+            contenedorBotones.style.display = "flex";
             carrito.forEach((producto, index) => {
                 const item = document.createElement("article");
                 item.classList.add("producto-card");
@@ -81,20 +81,21 @@ document.addEventListener("DOMContentLoaded", function () {
         contador.textContent = carrito.length;
     }
 
-    function eliminarProducto(index){
-        // Eliminamos del carrito
-        carrito.splice(index, 1);
-        // Actualizamos el localStorate
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-        // Actualizamos
-        renderCarrito();
-        
+    function eliminarProducto(index) {
+        if (confirm("¿Está seguro que desea eliminar el producto del carrito?")) {
+            // Eliminamos del carrito
+            carrito.splice(index, 1);
+            // Actualizamos el localStorate
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            // Actualizamos
+            renderCarrito();
+        }
     }
 
     // Vaciar Carrito
     const btnVaciar = document.getElementById("vaciar-carrito");
-    btnVaciar.addEventListener("click", ()=>{
-        if (confirm("¿Está seguro que desea vaciar el carrito?")){
+    btnVaciar.addEventListener("click", () => {
+        if (confirm("¿Está seguro que desea vaciar el carrito?")) {
             carrito = [];
             localStorage.removeItem("carrito");
             renderCarrito();
@@ -103,11 +104,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Finalizar compra
     const btnFinalizar = document.getElementById("finalizar-compra")
-    btnFinalizar.addEventListener("click", ()=>{
+    btnFinalizar.addEventListener("click", () => {
         // Comprobamos que el carrito esté vacío si no lo está terminamos la compra
-        if (carrito.length === 0 ){
+        if (carrito.length === 0) {
             alert("El carrito está vacío.")
-        } else if(confirm("¿Desea finalizar la compra?")){
+        } else if (confirm("¿Desea finalizar la compra?")) {
             alert("¡Gracias por su compra!")
             carrito = [];
             localStorage.removeItem("carrito");
