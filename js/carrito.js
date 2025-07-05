@@ -86,7 +86,30 @@ document.addEventListener("DOMContentLoaded", function () {
         
     }
 
+    // Vaciar Carrito
+    const btnVaciar = document.getElementById("vaciar-carrito");
+    btnVaciar.addEventListener("click", ()=>{
+        if (confirm("¿Está seguro de que desea vaciar el carrito?")){
+            carrito = [];
+            localStorage.removeItem("carrito");
+            renderCarrito();
+        }
+    })
 
+    // Finalizar compra
+    const btnFinalizar = document.getElementById("finalizar-compra")
+    btnFinalizar.addEventListener("click", ()=>{
+        // Comprobamos que el carrito esté vacío si no lo está terminamos la compra
+        if (carrito.length === 0 ){
+            alert("El carrito está vacío.")
+        } else if(confirm("¿Desea finalizar la compra?")){
+            alert("¡Gracias por la compra!")
+            carrito = [];
+            localStorage.removeItem("carrito");
+            window.location.href = "../index.html";
+        }
+    })
+    
     renderCarrito();
     actualizarContador();
 })
