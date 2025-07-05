@@ -1,29 +1,43 @@
-# En construcción
+# PhoneXpress
 
-# NovaFlix
-Pre entrega del proyecto para el curso de Front-End Js (comisión 25013).
+Proyecto final para el curso de Front-End JS (comisión 25013).
 
-Web de un cine ficticio llamado **NovaFlix**. 
+**PhoneXpress** es una tienda online ficticia especializada en smartphones, desarrollada con HTML, CSS y JavaScript moderno. Permite a los usuarios explorar productos, agregarlos a un carrito y simular una compra completa.
 
-Cuenta con una sección de introducción ("presentación del cine"), una sección de cartelera (con los posters de las películas disponibles) y una sección "sinopsis & trailers" (que incluye los trailers -iframe- ). También cuenta con una página "Consultas" con un formulario.
-
-## Autor
+## 🧑‍💻 Autor
 
 - Mariano C.
 
-## Características
+## 🌟 Características
 
-- Maquetado HTML con **uso de etiquetas semánticas**: header, nav, main, section, article, footer...
-- Uso de hoja de estilos (CSS) e implementación de fuentes a través de [Google Fonts](https://fonts.google.com/)
-- Utilización de **FlexBox** y **Grid** en CSS para la organización de contenido.
-- Uso de lista de navegación (UL) e inclusión de archivos multimedia (imágenes y videos)
-- Uso de **Git** para el manejo de versiones y **Github Pages** para el hosting del proyecto.
-- Implementación de formulario de contacto utilizando el servicio de [FormSpree.](https://formspree.io/)
-- Utilización de **Media Queries** para que el sitio sea responsivo.
+- Consumo dinámico de una API externa: [DummyJSON](https://dummyjson.com)
+- Renderizado de productos con JavaScript (DOM).
+- Sistema de carrito de compras utilizando `localStorage`.
+- Página de carrito con funciones para eliminar productos, vaciar el carrito y finalizar la compra.
+- Maquetado HTML con **etiquetas semánticas**: `header`, `main`, `section`, `article`, `footer`.
+- Estilos personalizados con CSS, uso de **Flexbox** y **Grid**.
+- Fuentes importadas desde [Google Fonts](https://fonts.google.com/).
+- Estilos adaptables con **Media Queries** para dispositivos móviles.
+- Implementación de formulario de contacto a través de la plataforma de [FormSpree.](https://formspree.io/)
+- Uso de Git para control de versiones y GitHub Pages para publicación.
 
-## Extras
-- El texto de inicio y la imagen del cine fueron creadas con [ChatGPT](https://chatgpt.com/).
-- Los posters y las sinopsis fueron descargadas de [FilmAffinity](https://www.filmaffinity.com/es/main.html)
+## 🚀 Estructura del Proyecto
+```bash
+.
+├── css
+│   └── styles.css
+├── img
+│   ├── favicon.ico
+│   └── imagen_inicio.png
+├── index.html
+├── js
+│   ├── carrito.js
+│   └── index.js
+├── pages
+│   ├── carrito.html
+│   └── contacto.html
+└── README.md
+```
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.github.com/mcattani)
