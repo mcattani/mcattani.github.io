@@ -58,6 +58,43 @@ nav ul.nav-lista li a:hover {
   transform: scale(1.05);
 }
 
+/* Sección de Inicio */
+.inicio {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Para que sea responsive */
+}
+
+.inicio-texto {
+    max-width: 500px;
+    text-align: left;
+}
+
+.inicio-texto h2 {
+    font-size: 2rem;
+    color: #00ffcc;
+    margin-bottom: 15px;
+}
+
+.inicio-texto p {
+    font-size: 1.1rem;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+.inicio-imagen img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 255, 204, 0.1);
+}
+
 /* Contenedor de Productos */
 #productos-container {
     display: flex;
@@ -290,6 +327,14 @@ form button:hover {
 
 /* Media Queries */
 @media (max-width: 768px) {
+   .inicio {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .inicio-texto {
+        text-align: center;
+    }
     #productos-container {
         flex-direction: column;
         align-items: center;

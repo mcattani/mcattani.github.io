@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Función para renderizar los productos en pantalla
     const renderProducts = () => {
         // Solicitamos los datos a la API -> promesa
-        fetch("https://dummyjson.com/products/category/smartphones?limit=8")
+        fetch("https://dummyjson.com/products/category/smartphones?limit=12")
         .then((res) => res.json()) // Esperamos promesa -> covertimos a js
         .then((data)=> {
             // Obtenemos el contenedor donde vamos a insertar los productos
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 
                 // Agregamos evento al botón 
                 btnAgregar.addEventListener("click", () => {
-                    alert(`${producto.title} agregado al carrito`)
+                    alert(`${producto.title} ha sido agregado al carrito.`)
                     agregarProducto(producto); // Guardamos el producto en el carrito
                     actualizarContador(); // Actualiamos cantidad de items
                 })

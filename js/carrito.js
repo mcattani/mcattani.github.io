@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Vaciar Carrito
     const btnVaciar = document.getElementById("vaciar-carrito");
     btnVaciar.addEventListener("click", ()=>{
-        if (confirm("¿Está seguro de que desea vaciar el carrito?")){
+        if (confirm("¿Está seguro que desea vaciar el carrito?")){
             carrito = [];
             localStorage.removeItem("carrito");
             renderCarrito();
