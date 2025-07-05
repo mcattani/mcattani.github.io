@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const contenedorCarrito = document.getElementById("carrito-container");
         const totalPagar = document.getElementById("total-pagar");
         const contador = document.getElementById("cantidad-carrito");
+        const contenedorBotones = document.querySelector(".carrito-botones");
 
         contenedorCarrito.innerHTML = "";
         console.log("Contenido actual del carrito:", carrito);
@@ -19,9 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
             contenedorCarrito.appendChild(mensaje);
             totalPagar.textContent = "$0";
             contador.textContent = "0";
+            // Ocultamos los botones si el carrito está vacío
+            contenedorBotones.style.display = "none";
+            
             return;
         } else {
-            // Si no esta vacio -> renderizamos los productos
+            // Si no esta vacio -> mostramos los botones de vaciado y finalizar y luego renderizamos los productos
+             contenedorBotones.style.display = "flex";
             carrito.forEach((producto, index) => {
                 const item = document.createElement("article");
                 item.classList.add("producto-card");
@@ -103,13 +108,13 @@ document.addEventListener("DOMContentLoaded", function () {
         if (carrito.length === 0 ){
             alert("El carrito está vacío.")
         } else if(confirm("¿Desea finalizar la compra?")){
-            alert("¡Gracias por la compra!")
+            alert("¡Gracias por su compra!")
             carrito = [];
             localStorage.removeItem("carrito");
             window.location.href = "../index.html";
         }
     })
-    
+
     renderCarrito();
     actualizarContador();
 })
